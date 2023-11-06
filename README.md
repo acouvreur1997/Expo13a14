@@ -35,4 +35,18 @@ Pour Android, aller dans le dossier android et faire un ./gradlew installDebug
 
 Pour iOS, ouvrir le dossier ios sur Xcode, chosir un simulateur (ou un vrai device si vous avez une development team) et builder
 
-### TODO : avoir plusieurs environnements (dev, re7, preprod, prod)
+### Passer le fichier app.json en app.config.ts
+
+app.json étant un fichier statique, si on veut par exemple que le nom de l'app varie selon l'environnement, on va devoir passer le fichier en app.config.ts pour que cela devienne un fichier dynamique
+
+### Créer différents environnements
+
+TODO
+
+### Avoir une appIcone pour chaque env
+
+TODO (app-icon-badge)
+
+### SplashScreen
+
+TODO
