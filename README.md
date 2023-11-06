@@ -25,3 +25,14 @@ Ne pas utiliser le registry cardiweb (https://registry.cardiweb.com/repository/n
 ### Créer un gitignore
 
 Créer un fichier .gitignore à la racine et y mettre ce que l'on ne veut pas commiter (comme les dossiers android, ios, les node_modules, le dossier expo, ...)
+
+### Builder en local
+
+Avant de commencer à dev, on va vérifier que le projet compile bien en local avec les dossiers android et ios générés par la commande prebuild.
+Lancer un yarn start dans un terminal à la racine du projet
+
+Pour Android, aller dans le dossier android et faire un ./gradlew installDebug
+
+Pour iOS, ouvrir le dossier ios sur Xcode, chosir un simulateur (ou un vrai device si vous avez une development team) et builder
+
+### TODO : avoir plusieurs environnements (dev, re7, preprod, prod)
