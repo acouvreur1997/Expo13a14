@@ -50,3 +50,15 @@ TODO (app-icon-badge)
 ### SplashScreen
 
 TODO
+
+### Ajouter des fonts custom
+
+TODO
+
+### Créer un plugin
+
+TODO
+
+### Quelques libs expo
+
+TODO
