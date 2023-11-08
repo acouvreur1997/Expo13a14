@@ -6,15 +6,17 @@ type AppConfig = {
   package: string;
 };
 
+const version = "1.0.0";
+
 const appConfigs: Record<string, AppConfig> = {
   debug: {
     logLevel: "debug",
-    name: "13à14 Debug",
+    name: "Expo debug",
     package: "com.expo.demo.debug",
   },
   release: {
     logLevel: "warn",
-    name: "13à14",
+    name: "Expo",
     package: "com.expo.demo",
   },
 };
@@ -24,7 +26,28 @@ export default (): ExpoConfig => {
   const config = appConfigs[env];
 
   return {
-    plugins: [],
+    plugins: [
+      [
+        "app-icon-badge",
+        {
+          enabled: env !== "release",
+          badges: [
+            {
+              text: env,
+              type: "ribbon",
+              color: "white",
+              background: "#94ad99",
+            },
+            {
+              text: version,
+              type: "banner",
+              color: "white",
+              background: "#94ad99",
+            },
+          ],
+        },
+      ],
+    ],
     splash: {
       image: "./assets/splash.png",
       resizeMode: "contain",
@@ -32,7 +55,7 @@ export default (): ExpoConfig => {
     },
     orientation: "portrait",
     name: config.name,
-    slug: "13-a-14-app",
+    slug: "expo-app",
     version: "1.0.0",
     icon: "./assets/icon.png",
     userInterfaceStyle: "light",

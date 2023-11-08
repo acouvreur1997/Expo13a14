@@ -17,10 +17,6 @@ yarn expo prebuild
 La 1ère fois, il va demander le nom de package qu'on veut donner pour Android ainsi que le bundle identifier pour iOS.
 Ces infos pourront être modifiés ultèrieument dans le fichier app.config.ts ou app.json
 
-##### Attention
-
-Ne pas utiliser le registry cardiweb (https://registry.cardiweb.com/repository/npm-interne/) mais un registry public (comme https://registry.npmjs.org/) sinon le yarn expo prebuild ne fonctionne pas (demander à Mike la raison)
-
 
 ### Créer un gitignore
 
@@ -49,7 +45,9 @@ Ou alors on crée un fichier .env et on précise l'environnement désiré (ENV=r
 
 ### Avoir une appIcone pour chaque env
 
-TODO (app-icon-badge)
+Soit on crée toutes les app icônes nous-mêmes et on les met dans le dossier assets et dans le fichier app.config.ts, selon l'environnement on dit à expo de prendre l'app icone correspondante.
+
+Soit on peut utiliser la lib app-icon-badge (https://www.npmjs.com/package/app-icon-badge?activeTab=readme) qui permet de gérer automatiquement l'affichage de bandeaux et on a juste à mettre 1 icone et 1 adaptative icon dans le dossier assets
 
 ### SplashScreen
 
