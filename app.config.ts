@@ -1,8 +1,29 @@
-import { ExpoConfig, ConfigContext } from "expo/config";
+import { ExpoConfig } from "expo/config";
 
-export default ({ config }: ConfigContext): ExpoConfig => {
+type AppConfig = {
+  logLevel: "debug" | "info" | "warn" | "error";
+  name: string;
+  package: string;
+};
+
+const appConfigs: Record<string, AppConfig> = {
+  debug: {
+    logLevel: "debug",
+    name: "13à14 Debug",
+    package: "com.expo.demo.debug",
+  },
+  release: {
+    logLevel: "warn",
+    name: "13à14",
+    package: "com.expo.demo",
+  },
+};
+
+export default (): ExpoConfig => {
+  const env = process.env.ENV || "debug";
+  const config = appConfigs[env];
+
   return {
-    ...config,
     plugins: [],
     splash: {
       image: "./assets/splash.png",
@@ -10,22 +31,22 @@ export default ({ config }: ConfigContext): ExpoConfig => {
       backgroundColor: "#ffffff",
     },
     orientation: "portrait",
-    name: "my-app",
-    slug: "my-app",
+    name: config.name,
+    slug: "13-a-14-app",
     version: "1.0.0",
     icon: "./assets/icon.png",
     userInterfaceStyle: "light",
     assetBundlePatterns: ["**/*"],
     ios: {
       supportsTablet: true,
-      bundleIdentifier: "com.expo.demo",
+      bundleIdentifier: config.package,
     },
     android: {
       adaptiveIcon: {
         foregroundImage: "./assets/adaptive-icon.png",
         backgroundColor: "#ffffff",
       },
-      package: "com.expo.demo",
+      package: config.package,
     },
   };
 };

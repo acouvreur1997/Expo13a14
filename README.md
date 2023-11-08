@@ -41,7 +41,11 @@ app.json étant un fichier statique, si on veut par exemple que le nom de l'app 
 
 ### Créer différents environnements
 
-TODO
+On va modifier le fichier app.config.ts pour déclarer un objet avec les variables qui changent selon l'environnement.
+Ensuite on refait un yarn expo prebuild en précisant l'environnement désiré dans la commande :
+ENV=release yarn expo prebuild
+
+Ou alors on crée un fichier .env et on précise l'environnement désiré (ENV=release) dedans et lorsque on fera un yarn expo prebuild, les valeurs présentes dans le fichier .env seront chargées.
 
 ### Avoir une appIcone pour chaque env
 
@@ -60,5 +64,9 @@ TODO
 TODO
 
 ### Quelques libs expo
+
+TODO
+
+### Générer l'apk / l'ipa
 
 TODO
