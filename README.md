@@ -57,7 +57,11 @@ Mettre l'image désirée dans le dossier assets et dans app.config dans splash l
 
 TODO
 
-### Créer un plugin
+### Ajouter des permissions android / iOS
+
+TODO
+
+### Créer un plugin custom
 
 TODO
 
