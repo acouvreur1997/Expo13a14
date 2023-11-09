@@ -49,9 +49,8 @@ export default (): ExpoConfig => {
       ],
     ],
     splash: {
-      image: "./assets/splash.png",
-      resizeMode: "contain",
-      backgroundColor: "#ffffff",
+      image: "./assets/splash-screen.png",
+      resizeMode: "cover",
     },
     orientation: "portrait",
     name: config.name,
@@ -66,7 +65,7 @@ export default (): ExpoConfig => {
     },
     android: {
       adaptiveIcon: {
-        foregroundImage: "./assets/adaptive-icon.png",
+        foregroundImage: "./assets/icon-adaptative.png",
         backgroundColor: "#ffffff",
       },
       package: config.package,

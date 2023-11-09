@@ -51,7 +51,7 @@ Soit on peut utiliser la lib app-icon-badge (https://www.npmjs.com/package/app-i
 
 ### SplashScreen
 
-TODO
+Mettre l'image désirée dans le dossier assets et dans app.config dans splash lui donner l'emplacement du splashScreen
 
 ### Ajouter des fonts custom
 
