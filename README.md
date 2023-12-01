@@ -55,7 +55,9 @@ Mettre l'image désirée dans le dossier assets et dans app.config dans splash l
 
 ### Ajouter des fonts custom
 
-TODO
+Mettre les fonts dans un dossier fonts dans le dossier assets.
+Installer la lib expo-fonts puis dans le fichier App.tsx (ou équivalent) utiliser le hook useFonts de la lib
+qui permetde lister les fonts custom que l'on veut charger dans l'app
 
 ### Ajouter des permissions android / iOS
 
