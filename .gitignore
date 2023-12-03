@@ -5,3 +5,8 @@ android/
 ios/
 
 .env
+
+*.apk
+*.tar.gz
+*.ipa
+*.aab

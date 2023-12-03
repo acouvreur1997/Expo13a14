@@ -70,5 +70,10 @@ export default (): ExpoConfig => {
       },
       package: config.package,
     },
+    extra: {
+      eas: {
+        projectId: "0c34f190-0ef2-4f3b-b913-3c06c155ebdf",
+      },
+    },
   };
 };

@@ -1,0 +1,32 @@
+{
+  "cli": {
+    "version": ">= 3.13.3",
+    "promptToConfigurePushNotifications": false
+  },
+  "build": {
+    "debug": {
+      "node": "18.16.0",
+      "developmentClient": true,
+      "env": {
+        "ENV": "debug"
+      },
+      "android": {
+        "buildType": "apk",
+        "distribution": "internal"
+      },
+      "ios": {
+        "simulator": true
+      }
+    },
+    "release": {
+      "extends": "debug",
+      "developmentClient": false,
+      "env": {
+        "ENV": "release"
+      },
+      "ios": {
+        "simulator": false
+      }
+    }
+  }
+}
