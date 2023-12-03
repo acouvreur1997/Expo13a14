@@ -59,18 +59,29 @@ Mettre les fonts dans un dossier fonts dans le dossier assets.
 Installer la lib expo-fonts puis dans le fichier App.tsx (ou équivalent) utiliser le hook useFonts de la lib
 qui permetde lister les fonts custom que l'on veut charger dans l'app
 
-### Ajouter des permissions android / iOS
+### EAS Build
 
-TODO
+Installer eas-cli
+Se connecter à son compte expo avec expo eas-login
+Configurer le projet avec eas build:configure
+Si on a un fichier app.config.ts et non un fichier app.json, il faut rajouter le projectId généré par la commande précédente 
+(ce projectId peut être retrouvé dans la console expo)
+Il faut créer un fichier eas.json à la racine avec les infos de configuration voulu
 
-### Créer un plugin custom
+Pour lancer un build eas :
+Pour Android : eas build –p android –profile debug
+Pour iOS : eas build –p ios –profile debug
 
-TODO
+Avec -profile un des profils renseignés dans le fichier eas.json
 
-### Quelques libs expo
+# Build local (générer apk/ipa/tar.gz)
 
-TODO
+Pour générer l'apk en local :
+ANDROID_HOME=/Users/adriencouvreur/Library/Android/sdk eas build --profile debug --platform android --local
 
-### Générer l'apk / l'ipa
+Avec ANDROID_HOME l'emplacement du sdk Android
+--profile : un des profils renseignés dans le fichier eas.json
+--platform: android ou ios
+--local: pour précisier qu'il s'agit d'un build local
 
-TODO
+Les fichiers apk/ipa/tar.gz générés peuvent être retrouvés à la racine du projet
